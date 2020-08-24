@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { LoginModule } from "./login/login.module";
 import { InicioModule } from "./inicio/inicio.module";
 import { GlobalVerifycationService } from "./global/GlobalVerifycation.service";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [AppComponent],

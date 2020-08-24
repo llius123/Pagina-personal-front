@@ -12,10 +12,13 @@ import { LoginService } from "../login/login.service";
   providedIn: "root",
 })
 export class GlobalVerifycationService implements CanActivate {
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private route: Router) {}
 
   canActivate(): Observable<boolean> | Promise<boolean> | boolean {
-    console.log(this.loginService.user);
-    return true;
+    if (this.loginService.user) {
+      return true;
+    } else {
+      this.route.navigate(["navigate"]);
+    }
   }
 }

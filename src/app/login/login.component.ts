@@ -9,9 +9,15 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent {
   constructor(private loginService: LoginService, private route: Router) {}
-  login(user, pass) {
-    this.loginService.login(user, pass).subscribe((resp) => {
+
+  public user: string;
+  public pass: string;
+
+  login() {
+    console.log(this.user, this.pass);
+    this.loginService.login(this.user, this.pass).subscribe((resp) => {
       this.loginService.user = resp;
+      this.route.navigate(["inicio"]);
     });
   }
 }

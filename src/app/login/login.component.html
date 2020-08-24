@@ -1,3 +1,15 @@
-<input #user>
-<input #pass>
-<button (click)="login(user, pass)">Login</button>
+<div nz-row nzJustify="center">
+    <div nz-col nzSpan="4">
+        <input nz-input [(ngModel)]="user">
+    </div>
+
+</div>
+<div nz-row nzJustify="center">
+    <div nz-col nzSpan="4">
+        <input nz-input [(ngModel)]="pass">
+    </div>
+
+</div>
+<div nz-row nzJustify="center">
+    <button (click)="login()" nz-button nzType="primary">Login</button>
+</div>
