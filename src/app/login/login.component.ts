@@ -14,7 +14,8 @@ export class LoginComponent {
   public pass: string;
 
   login() {
-    console.log(this.user, this.pass);
+    this.user = "admin";
+    this.pass = "admin";
     this.loginService.login(this.user, this.pass).subscribe((resp) => {
       this.loginService.user = resp;
       this.route.navigate(["inicio"]);

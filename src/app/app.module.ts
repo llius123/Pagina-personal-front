@@ -6,11 +6,18 @@ import { AppComponent } from "./app.component";
 import { LoginModule } from "./login/login.module";
 import { InicioModule } from "./inicio/inicio.module";
 import { GlobalVerifycationService } from "./global/GlobalVerifycation.service";
-import { FormsModule } from "@angular/forms";
+
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, LoginModule, InicioModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    LoginModule,
+    InicioModule,
+    BrowserAnimationsModule,
+  ],
   providers: [GlobalVerifycationService],
   bootstrap: [AppComponent],
 })
